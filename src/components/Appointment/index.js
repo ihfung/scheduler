@@ -23,12 +23,12 @@ export default function Appointment(props) {
 
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
-  );
+  ); // if interview is present, show the interview, else show empty
 
   
 
   function save(name, interviewer) {
-  const interview = {
+  const interview = { // creating an interview object
     student: name,
     interviewer
   };
@@ -52,7 +52,7 @@ function destroy() {
   return (
     <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
-     {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
+     {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />} 
 {mode === SHOW &&
   <Show student={props.interview.student}
     interviewer={props.interview.interviewer}
