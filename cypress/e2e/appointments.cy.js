@@ -48,6 +48,8 @@ describe("Appointments", () => {
 
 });
 
+//npm run cypress
+
 //contain is used to check if the element contains the text like <button name="save">Save</button> so we can use cy.contains("Save") to check if the button contains the text "Save"
 
 //get is used to get the element by its attribute like <button name="save">Save</button> so we can use cy.get("[name=save]") to get the button element or <input value="hello"> so we can use cy.get("input") to get the input element
